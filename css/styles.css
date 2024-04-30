@@ -12,7 +12,7 @@
 }
 :root{
     --primary: royalblue;
-    --secondary: rgb(255, 255, 255);
+    --secondary: rgba(175, 169, 201, 0.704);
     --awesome: hs1(135, 53%, 37%, .7);
 }
 
@@ -28,6 +28,15 @@
     border-image: radial-gradient(120deg, var(--numbOfRed), var(--numbOfOrange), var(--numbofYellow));
 }
 
-.Container:has(#Wrapper){
+.Container:has(#wrapper){
     background-color: royalblue;
 }
+
+/*Display flex*/
+.Container:is(#example1, #example2),
+.button-wrapper{
+display: flex;
+gap: 6rem;
+}
+
+/*wrap: when there is no enough space it moves it to the next line. or like wrapping a box prevents
