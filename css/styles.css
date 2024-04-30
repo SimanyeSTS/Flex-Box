@@ -1,12 +1,33 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
-
+*,
 * ::before,
 *::after{
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 ::-webkit-scrollbar{
     display: none;
+}
+:root{
+    --primary: royalblue;
+    --secondary: rgb(255, 255, 255);
+    --awesome: hs1(135, 53%, 37%, .7);
+}
+
+/*Container*/
+.Container{
+    /*Local custom variable*/
+    /*top and bottom*/
+    margin-block: 20px;
+    --numbOfRed:123;
+    --numbOfOrange: 100;
+    --numbofYellow: 18;
+    border-width: 5px 8px;
+    border-image: radial-gradient(120deg, var(--numbOfRed), var(--numbOfOrange), var(--numbofYellow));
+}
+
+.Container:has(#Wrapper){
+    background-color: royalblue;
 }
